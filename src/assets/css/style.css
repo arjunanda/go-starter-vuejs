@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+.navbar-fixed {
+  @apply fixed z-[9999] bg-white bg-opacity-80;
+  backdrop-filter: blur(5px);
+  box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.2);
+}
+.hamburger-line {
+  @apply w-[30px] h-[2px] my-2 block bg-dark transition duration-300 ease-in-out;
+}
+
+.hamburger_active > span:nth-child(1) {
+  @apply rotate-45;
+}
+
+.hamburger_active > span:nth-child(2) {
+  @apply scale-0;
+}
+
+.hamburger_active > span:nth-child(3) {
+  @apply origin-bottom-left -rotate-45;
+}
+.slide-active {
+  @apply text-blue-500 bg-gradient-to-r from-white to-blue-100 border-r-4 border-blue-500 dark:from-gray-700 dark:to-gray-800 border-r-4 border-blue-500;
+}
+
+.text_active {
+  @apply text-primary;
+}
